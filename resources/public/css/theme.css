@@ -68,25 +68,25 @@ a {
     transition:color 0.3s
 }
 .heading, body > header h1, h1, h2, h3, h4, h5, h6 {
-    font-family:"Cardo", "Della Respira", "EB Garamond", "Sorts Mill Goudy", "Helvetica Neue", Tahoma, serif
+    font-family:"Helvetica Neue", Tahoma, serif
 }
 .serif, body, #content .blog-index a[rel=full-article] {
-    font-family:"Cardo", "Della Respira", "EB Garamond", "Sorts Mill Goudy", "Helvetica Neue", Tahoma, serif
+    font-family:"Helvetica Neue", Tahoma, serif
 }
 .mono, pre, code, tt, p code, li code {
     font-family:Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace
 }
 body > header h1 {
     text-transform:uppercase;
-    font-size:1.8em;
-    font-family:"Lato", "Fontdiner Swanky", "Germania One", "Poller One", "Georgia", "Helvetica Neue", Arial, sans-serif;
+    font-size:2.0em;
+    font-family:"Fontdiner Swanky", "Poller One", "Georgia", "Helvetica Neue", Arial, sans-serif;
     font-weight:normal;
-    line-height:1.2em;
+    line-height:1.3em;
     margin-bottom:0.6667em
 }
 body > header h2 {
     font-size:0.7em;
-    font-family:"Cardo", "Della Respira", "EB Garamond", "Sorts Mill Goudy", "Helvetica Neue", Tahoma, serif
+    font-family:"Helvetica Neue", Tahoma, serif
 }
 body {
     line-height:1.7em;
@@ -440,7 +440,7 @@ body > nav form .search {
     text-align:center;
     padding:.3em .5em 0;
     font-size:.85em;
-    font-family:"Cardo", "Della Respira", "EB Garamond", "Sorts Mill Goudy", "Helvetica Neue", Tahoma, serif;
+    font-family:"Helvetica Neue", Tahoma, serif;
     line-height:1.1em;
     width:95%;
     -moz-border-radius:0.5em;
@@ -525,7 +525,7 @@ body > nav ul {
     }
     body > nav a {
         color:#2a2a2a;
-        font-family:"Cardo", "Della Respira", "EB Garamond", "Sorts Mill Goudy", "Helvetica Neue", Tahoma, serif;
+        font-family:"Helvetica Neue", Tahoma, serif;
         text-shadow:#fff 0 1px;
         text-decoration:none;
         font-size:1.1em;
