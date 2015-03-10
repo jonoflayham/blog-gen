@@ -1,6 +1,6 @@
 (defproject blog-gen "0.1.0-SNAPSHOT"
-  :description "bryan.codes && bryangilbert.com source code"
-  :url "http://bryan.codes"
+  :description "Source code and content for jonoflayham.io.  Code derived from https://github.com/gilbertw1/blog-gen, and comprehended with the help of https://github.com/cjohansen/cjohansen-no/blob/master/resources/md/building-static-sites-in-clojure-with-stasis.md, with thanks to the authors of both."
+  :url "http://jonoflayham.io"
   :license {:name "BSD 2 Clause"
             :url "http://opensource.org/licenses/BSD-2-Clause"}
   :dependencies [[org.clojure/clojure "1.5.1"]

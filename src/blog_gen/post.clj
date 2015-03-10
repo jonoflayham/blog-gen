@@ -6,12 +6,7 @@
 (def formatter (tf/formatter "yyyy-MM-dd"))
 
 (def old-style-posts
-  ["rx-the-importance-of-honoring-unsubscribe"
-   "rxPlay-making-iteratees-and-observables-play-nice"
-   "anatomy-of-a-clojure-macro"
-   "escaping-callback-hell-with-core-async"
-   "action-composition-auth"
-   "anorm-pk-json"])
+  [])
 
 (defn- remove-meta [page]
   (str/replace page #"(?is)^---.*?---" ""))
@@ -45,7 +40,7 @@
   (let [meta-section (extract-meta-block raw-content)
         content (remove-meta raw-content)
         path (prepare-path raw-path)]
-    {:title (or (extract-title meta-section) "Random Thought")
+    {:title (or (extract-title meta-section) "A Thought")
      :tags (extract-tags meta-section)
      :date (extract-date raw-path)
      :path path

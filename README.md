@@ -1,11 +1,9 @@
-blog-gen
-========
+jonoflayham.github.io
+=====================
 
-A hand rolled static (blog) site generator writting in clojure using [stasis](https://github.com/magnars/stasis). Inspired very heavily by [this blog post](http://cjohansen.no/building-static-sites-in-clojure-with-stasis).
+Static blog site generator for [jonoflyahm.io](http://jonoflayham.io).
 
-This project powers http://bryangilbert.com and http://bryan.codes
-
-TODO -- Similar Posts, Extract out some configuration
+With thanks to those involved, code (but not content within `resources/posts`) is based on [https://github.com/gilbertw1/blog-gen](https://github.com/gilbertw1/blog-gen), which is in turn derived from [stasis](https://github.com/magnars/stasis) and [an excellent stasis tutorial](http://cjohansen.no/building-static-sites-in-clojure-with-stasis).
 
 Running
 -------

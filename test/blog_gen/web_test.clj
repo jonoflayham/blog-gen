@@ -1,5 +1,5 @@
-(ns gilbertw1-blog.web-test
-  (:require [gilbertw1-blog.web :refer :all]
+(ns blog-gen.web-test
+  (:require [blog-gen.web :refer :all]
             [midje.sweet :refer :all]
             [net.cgrand.enlive-html :as enlive]))
 

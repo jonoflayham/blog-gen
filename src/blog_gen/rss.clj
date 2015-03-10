@@ -5,9 +5,9 @@
   [:entry
    [:title (:title post)]
    [:updated (:date post)]
-   [:author [:name "Bryan Gilbert"]]
-   [:link {:href (str "http://bryangilbert.com" (:path post))}]
-   [:id (str "urn:bryangilbert-com:feed:post:" (:title post))]
+   [:author [:name "Jon Woods"]]
+   [:link {:href (str "http://jonoflayham.io" (:path post))}]
+   [:id (str "urn:jonoflayham-io:feed:post:" (:title post))]
    [:content {:type "html"} (:content post)]])
 
 (defn atom-xml [posts]
@@ -15,8 +15,8 @@
     (xml/emit-str
      (xml/sexp-as-element
       [:feed {:xmlns "http://www.w3.org/2005/Atom"}
-       [:id "urn:bryangilbert-com:feed"]
+       [:id "urn:jonoflayham-io:feed"]
        [:updated (-> posts first :date)]
-       [:title {:type "text"} "Random.next()"]
-       [:link {:rel "self" :href "http://bryangilbert.com/atom.xml"}]
+       [:title {:type "text"} "Loose Typing"]
+       [:link {:rel "self" :href "http://jonoflayham.io/atom.xml"}]
        (map entry posts)]))))

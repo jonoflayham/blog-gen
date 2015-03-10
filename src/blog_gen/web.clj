@@ -24,7 +24,8 @@
    "/blog/index.html" (fn [req] (layout/home req posts))
    "/archive/index.html" (fn [req] (layout/archive req posts))
    "/tags/index.html" (fn [req] (layout/tags req posts))
-   "/blog/2014/02/04/akka-reactive-streams/index.html" (fn [req] (layout/redirect req "/blog/2015/02/04/akka-reactive-streams/index.html"))})
+   ; "/blog/2014/02/04/akka-reactive-streams/index.html" (fn [req] (layout/redirect req "/blog/2015/02/04/akka-reactive-streams/index.html"))
+   })
 
 (defn layout-tag-page [tag posts]
   [(str "/tags/" tag "/index.html") (fn [req] (layout/tag req posts tag))])

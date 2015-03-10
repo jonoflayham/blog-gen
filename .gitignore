@@ -7,6 +7,6 @@ pom.xml.asc
 /checkouts/
 /dist/
 .lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
+.*
+!.gitignore
+*.iml
