@@ -3,6 +3,7 @@
             [blog-gen.post :as post]
             [blog-gen.layout :as layout]
             [blog-gen.rss :as rss]
+            [blog-gen.file :as file]
             [optimus.assets :as assets]
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
@@ -91,6 +92,7 @@
 
 (defn export []
   (let [assets (optimizations/all (get-assets) {})]
-    (stasis/empty-directory! export-dir)
+    ;(stasis/empty-directory! export-dir)
+    (file/clean-export-area! export-dir)
     (optimus.export/save-assets assets export-dir)
     (stasis/export-pages (get-pages) export-dir {:optimus-assets assets})))
