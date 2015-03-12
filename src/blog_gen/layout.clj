@@ -33,16 +33,11 @@
       [:title "Loose Typing"]
       [:link {:rel "stylesheet" :href (link/file-path request "/css/theme.css")}]
       [:link {:rel "stylesheet" :href (link/file-path request "/css/zenburn-custom.css")}]
-      [:link {:href "http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" :rel "stylesheet" :type "text/css"}]
-      [:link {:href "http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" :rel "stylesheet" :type "text/css"}]
       [:link {:href "http://fonts.googleapis.com/css?family=Poller+One" :rel "stylesheet" :type "text/css"}]
       [:link {:href "http://fonts.googleapis.com/css?family=Germania+One" :rel "stylesheet" :type "text/css"}]
       [:link {:href "http://fonts.googleapis.com/css?family=Fontdiner+Swanky" :rel "stylesheet" :type "text/css"}]
       [:link {:href "http://fonts.googleapis.com/css?family=Lato" :rel "stylesheet" :type "text/css"}]
-      [:link {:href "http://fonts.googleapis.com/css?family=Cardo" :rel "stylesheet" :type "text/css"}]
-      [:link {:href "http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" :rel "stylesheet" :type "text/css"}]
-      [:link {:href "http://fonts.googleapis.com/css?family=EB+Garamond" :rel "stylesheet" :type "text/css"}]
-      [:link {:href "http://fonts.googleapis.com/css?family=Della+Respira" :rel "stylesheet" :type "text/css"}]]
+      [:link {:href "http://fonts.googleapis.com/css?family=Cardo" :rel "stylesheet" :type "text/css"}]]
       ;[:script "
       ;  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       ;  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
