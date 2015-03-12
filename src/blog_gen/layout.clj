@@ -21,7 +21,7 @@
       20 "th"
       (date-ordinal-suffix (mod day-number 10)))))
 
-(defn main [request content]
+(defn main [request title content]
   (html5
     [:head
       (when-let [uri (:uri request)]
@@ -30,7 +30,7 @@
       [:meta {:name "MobileOptimized" :content "320"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
       [:meta {:charset "utf-8"}]
-      [:title "Loose Typing"]
+      [:title "Loose Typing" (if title (str " - " title))]
       [:link {:rel "stylesheet" :href (link/file-path request "/css/theme.css")}]
       [:link {:rel "stylesheet" :href (link/file-path request "/css/zenburn-custom.css")}]
       [:link {:href "http://fonts.googleapis.com/css?family=Poller+One" :rel "stylesheet" :type "text/css"}]
@@ -74,7 +74,7 @@
          " &nbsp; | &nbsp; Mostly themed with " [:a {:href "https://github.com/TheChymera/Koenigspress"} "Königspress"]]]]]))
 
 (defn post [request {:keys [title tags date path disqus-path content]}]
-  (main request
+  (main request title
     [:div#content
       [:article.hentry {:role "article"}
         [:header
@@ -105,7 +105,7 @@
 
 (defn home [request posts]
   (let [{:keys [title tags date path disqus-path content]} (->> posts (sort-by :date) reverse first)]
-    (main request
+    (main request nil
       [:div#content
         [:div.blog-index
           [:article
@@ -142,7 +142,7 @@
 
 (defn archive-like [request posts title]
   (let [post-groups (->> posts (group-by #(t/year (:date %))) (sort-by first) reverse)]
-    (main request
+    (main request title
       [:div#content
         [:article.hentry {:role "article"}
           [:header
@@ -169,7 +169,7 @@
 
 (defn tags [request posts]
   (let [unique-tags (->> posts (map :tags) flatten distinct sort)]
-    (main request
+    (main request "Tags"
       [:div#content
         [:article.hentry {:role "article"}
           [:header
