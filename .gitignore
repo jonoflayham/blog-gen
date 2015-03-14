@@ -10,4 +10,5 @@ pom.xml.asc
 .*
 !.gitignore
 !.nojekyll
+!.travis.yml
 *.iml
