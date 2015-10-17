@@ -1,14 +1,10 @@
 pom.xml
 pom.xml.asc
 *jar
-/lib/
-/classes/
+*.iml
 /target/
-/checkouts/
 /dist/
-.lein-deps-sum
 .*
 !.gitignore
 !.nojekyll
 !.travis.yml
-*.iml
