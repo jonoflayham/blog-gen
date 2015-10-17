@@ -29,7 +29,8 @@
 (defn- prepare-path [path]
   (-> path
       (str/replace #"\.md$" "")
-      (str/replace #"(\d\d\d\d)-(\d\d)-(\d\d)-" "blog/$1/$2/$3/")))
+      (str/replace #"(\d\d\d\d)-(\d\d)-(\d\d)-" "blog/$1/$2/$3/")
+      (str "/")))
 
 (defn- to-disqus-path [path]
   (if (some #(re-seq (re-pattern %) path) old-style-posts)
