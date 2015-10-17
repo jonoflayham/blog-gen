@@ -1,5 +1,9 @@
+branches:
+  only:
+  - master
 language: clojure
 lein: lein2
 jdk:
   - oraclejdk8
-script: lein midje
+script: bash test-build-and-push.sh
+secure: "VE6t6Mv7Oa6V6LLS+fUqeyjb5cFEwmHOPZQ+EAlZa8ert1Asdv244E9Hsyy6g4cqjpnqvkP/IbkVIbmzjojHxX2dwFdEP7I/GhNSkqw+r1o1NPU23Vh5scesOK4A36JGsNXlrM9pQ9X6DlMBRKz5arpblYbG1+zo+jEl0YEphv4="
