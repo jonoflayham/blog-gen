@@ -6,7 +6,7 @@
    [:title (:title post)]
    [:updated (:date post)]
    [:author [:name "Jon Woods"]]
-   [:link {:href (str "http://jonoflayham.io" (:path post))}]
+   [:link {:href (str "http://jonoflayham.com" (:path post))}]
    [:id (str "urn:jonoflayham-io:feed:post:" (:title post))]
    [:content {:type "html"} (:content post)]])
 
@@ -18,5 +18,5 @@
        [:id "urn:jonoflayham-io:feed"]
        [:updated (-> posts first :date)]
        [:title {:type "text"} "Loose Typing"]
-       [:link {:rel "self" :href "http://jonoflayham.io/atom.xml"}]
+       [:link {:rel "self" :href "http://jonoflayham.com/atom.xml"}]
        (map entry posts)]))))

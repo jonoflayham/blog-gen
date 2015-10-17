@@ -25,7 +25,7 @@
   (html5
     [:head
       (when-let [uri (:uri request)]
-        [:link {:rel "canonical" :href (str "http://jonoflayham.io" uri)}])
+        [:link {:rel "canonical" :href (str "http://jonoflayham.com" uri)}])
       [:meta {:name "HandheldFriendly" :content "True"}]
       [:meta {:name "MobileOptimized" :content "320"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
