@@ -3,18 +3,18 @@
   :url "http://jonoflayham.com"
   :license {:name "BSD 2 Clause"
             :url "http://opensource.org/licenses/BSD-2-Clause"}
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [stasis "2.2.2"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [stasis "2.3.0"]
                  [ring "1.4.0"]
                  [hiccup "1.0.5"]
                  [me.raynes/cegdown "0.1.1"]
                  [enlive "1.1.6"]
                  [clygments "0.1.1"]
-                 [optimus "0.18.3"]
+                 [optimus "0.18.4"]
                  [clj-time "0.11.0"]
                  [org.clojure/data.xml "0.0.8"]]
   :ring {:handler blog-gen.web/app}
   :aliases {"build-site" ["run" "-m" "blog-gen.web/export"]}
-  :profiles {:dev {:dependencies [[midje "1.7.0" :exclusions [org.clojure/clojure]]]
+  :profiles {:dev {:dependencies [[midje "1.8.3" :exclusions [org.clojure/clojure]]]
                    :plugins [[lein-ring "0.9.7"]
-                             [lein-midje "3.1.3"]]}})
+                             [lein-midje "3.2"]]}})
