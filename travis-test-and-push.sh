@@ -21,5 +21,11 @@ lein run -m blog-gen.web/export
 
 echo "Adding, committing and pushing changes to the repo for the built site"
 git add --all
+
+git config user.email "jonoflayham@gmail.com"
+git config user.name "Jon Woods"
+git config --global push.default simple
+
+
 git commit -m "Site generated from https://github.com/jonoflayham/blog-gen/commit/$generatorCommitHash"
 git push https://${GH_TOKEN}@github.com/jonoflayham/jonoflayham.github.io.git
