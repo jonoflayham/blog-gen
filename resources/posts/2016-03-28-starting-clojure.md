@@ -27,7 +27,7 @@ Off the top of my head, places to explore in IntelliJ re Cursive/Clojure: the Ru
 
 ## REPLs in general
 
-A REPL is in some namespace.  It has access to definitions you've evaluated in it, whether by typing them or by asking eg Cursive to evaluate some source code in the REPL context.  It has history, so up-arrow works.  For the Leiningen REPL, history is stored in the current working directory in .lein-repl-history; dunno about Cursive's history.  REPLs also generally have auto-complete - start typing then use tab.
+A REPL is in some namespace.  It has access to definitions you've evaluated in it, whether by typing them or by asking eg Cursive to evaluate some source code in the REPL context.  It has history, so up-arrow works.  For the Leiningen REPL, history is stored in the current working directory in `.lein-repl-history`; dunno about Cursive's history.  REPLs also generally have auto-complete - start typing then use tab.
 
 There are 3 or 4 really useful REPL functions.  They're in the clojure.repl namespace.  When invoking these functions you don't start off by having to mention the name space, but depending on what you do with namespaces in your REPL session you may find you later have to specify the namespace explicitly.  So e.g.
 
@@ -39,7 +39,7 @@ There are 3 or 4 really useful REPL functions.  They're in the clojure.repl name
 
 The last prints its own source code.
 
-Of course, since you're in IntelliJ you can delve into source code in the ways you'd expect (command-click, command B etc).
+Of course, since you're in IntelliJ you can delve into source code in the ways you'd expect (command-click, command-b etc).
 
 # Going deep
 
@@ -49,7 +49,7 @@ There'll be two particular wrinkles to smooth over in this early phase.
 
 ## Early wrinkle 1: stack traces
 
-You'll probably be baffled along the way by stack traces.  Both the Leiningen REPL and Cursive's will shorten exception reports.  In both cases, *e evaluates to the last exception met.  If you want grab hold of that to take a look,   (def bla *e)   then you've got bla, without worrying about *e being overwritten by your next experiment.  Cursive will pretty-print a useful representation of exceptions when you evaluate them - you could try that out early on:
+You'll probably be baffled along the way by stack traces.  Both the Leiningen REPL and Cursive's will shorten exception reports.  In both cases, `*e` evaluates to the last exception met.  If you want grab hold of that to take a look,   `(def bla *e)`   then you've got `bla`, without worrying about `*e` being overwritten by your next experiment.  Cursive will pretty-print a useful representation of exceptions when you evaluate them - you could try that out early on:
 
 ```clj
     wibble
@@ -90,3 +90,7 @@ If you'd like something with a nice narrative and crystal clear explanations (an
 Once the number of wtf?! moments is down to a manageable level when you look at Clojure code, the best book I can recommend is the Clojure Cookbook.  Real-world problems, using real-world libraries, with succinct explanations and things you can easily try out.  Core things (joining two lists, mapping functions over things), cool things (eg core/async) plus the real messy stuff (using Lucene, stashing things in Redis, generating PDFs...).  The only downside is that it was published in 2014, but I should think all the libraries it mentions, and certainly all the patterns, are relevant.
 
 It's available as a book/an ebook from O'Reilly via http://clojure-cookbook.com/ or Amazon etc, or in source code at https://github.com/clojure-cookbook/clojure-cookbook.
+
+# The community
+
+Follow [#twitter](https://twitter.com/hashtag/clojure) to a while to get a flavour of what's going on and how people in the community interact.  More at http://clojure.org/community/resources.
