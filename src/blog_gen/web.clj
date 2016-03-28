@@ -11,8 +11,6 @@
             [optimus.export]
             [stasis.core :as stasis]))
 
-(def export-dir "dist")
-
 (defn layout-post [post]
   [(:path post) (fn [req] (layout/post req post))])
 
@@ -90,7 +88,7 @@
                 optimizations/all
                 serve-live-assets))
 
-(defn export []
+(defn export [export-dir]
   (let [assets (optimizations/all (get-assets) {})]
     ;(stasis/empty-directory! export-dir)
     (file/clean-export-area! export-dir)
