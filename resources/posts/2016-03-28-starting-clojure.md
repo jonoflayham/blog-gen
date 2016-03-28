@@ -7,7 +7,7 @@ _I'd promised a friend at work that I would put together a few suggestions for l
 
 # Build tool
 
-Let's go with Leiningen for now, since it's 
+For a build and dependency management tool, let's go with Leiningen for now, since it's pretty much the standard.  One of the nice things about the Clojure ecosystem is that questioning the _status quo_ is the norm, so don't worry that you'll become the equivalent of a Mavenite. 
 
 # Clojure version
 
