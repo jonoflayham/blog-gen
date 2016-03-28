@@ -19,5 +19,5 @@
 
 (defn highlight-code-blocks [page]
   (enlive/sniptest page
-    [:pre :code] highlight
-    [:pre :code] #(assoc-in % [:attrs :class] "codehilite")))
+                   [:pre :code] highlight
+                   [:pre :code] #(assoc-in % [:attrs :class] "codehilite")))

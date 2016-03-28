@@ -19,10 +19,10 @@
     (into {} post-layouts)))
 
 (defn create-dynamic-pages [posts]
-  {"/index.html" (fn [req] (layout/home req posts))
-   "/blog/index.html" (fn [req] (layout/home req posts))
+  {"/index.html"         (fn [req] (layout/home req posts))
+   "/blog/index.html"    (fn [req] (layout/home req posts))
    "/archive/index.html" (fn [req] (layout/archive req posts))
-   "/tags/index.html" (fn [req] (layout/tags req posts))
+   "/tags/index.html"    (fn [req] (layout/tags req posts))
    ; "/blog/2014/02/04/akka-reactive-streams/index.html" (fn [req] (layout/redirect req "/blog/2015/02/04/akka-reactive-streams/index.html"))
    })
 
@@ -63,12 +63,12 @@
   (let [posts (map post/create-post (slurp-posts "posts"))
         old-posts (post/prepare-old posts)]
     (stasis/merge-page-sources
-      {:public (slurp-static "public")
-       :posts (layout-posts posts)
+      {:public  (slurp-static "public")
+       :posts   (layout-posts posts)
        :dynamic (create-dynamic-pages posts)
-       :tags (create-tag-pages posts)
-       :old (layout-posts old-posts)
-       :rss (create-rss-pages posts)})))
+       :tags    (create-tag-pages posts)
+       :old     (layout-posts old-posts)
+       :rss     (create-rss-pages posts)})))
 
 (defn prepare-page [page req]
   (-> (if (string? page) page (page req)) highlight/highlight-code-blocks))

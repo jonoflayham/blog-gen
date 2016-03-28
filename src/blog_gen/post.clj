@@ -41,12 +41,12 @@
   (let [meta-section (extract-meta-block raw-content)
         content (remove-meta raw-content)
         path (prepare-path raw-path)]
-    {:title (or (extract-title meta-section) "A Thought")
-     :tags (extract-tags meta-section)
-     :date (extract-date raw-path)
-     :path path
+    {:title       (or (extract-title meta-section) "A Thought")
+     :tags        (extract-tags meta-section)
+     :date        (extract-date raw-path)
+     :path        path
      :disqus-path (to-disqus-path path)
-     :content (parse/markdown content)}))
+     :content     (parse/markdown content)}))
 
 (defn- is-old? [{path :path}]
   (some #(re-seq (re-pattern %) path) old-style-posts))

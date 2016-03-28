@@ -13,10 +13,10 @@
 (defn atom-xml [posts]
   (let [sorted-posts (->> posts (sort-by :date) reverse)]
     (xml/emit-str
-     (xml/sexp-as-element
-      [:feed {:xmlns "http://www.w3.org/2005/Atom"}
-       [:id "urn:jonoflayham-io:feed"]
-       [:updated (-> posts first :date)]
-       [:title {:type "text"} "Loose Typing"]
-       [:link {:rel "self" :href "http://jonoflayham.com/atom.xml"}]
-       (map entry posts)]))))
+      (xml/sexp-as-element
+        [:feed {:xmlns "http://www.w3.org/2005/Atom"}
+         [:id "urn:jonoflayham-io:feed"]
+         [:updated (-> posts first :date)]
+         [:title {:type "text"} "Loose Typing"]
+         [:link {:rel "self" :href "http://jonoflayham.com/atom.xml"}]
+         (map entry posts)]))))
