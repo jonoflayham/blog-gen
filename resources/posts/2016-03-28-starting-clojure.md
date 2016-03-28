@@ -11,7 +11,7 @@ For a build and dependency management tool, let's go with Leiningen for now, sin
 
 # Clojure version
 
-The latest stable Clojure is at version 1.8.  You specify it just like any other project dependency, in Leingingen's `project.clj` file.
+The latest stable Clojure is at version 1.8.  You specify it just like any other project dependency, in Leiningen's `project.clj` file.
 
 # Tools
 
