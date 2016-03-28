@@ -89,29 +89,30 @@ body > header h2 {
     font-family:"Helvetica Neue", Tahoma, serif
 }
 body {
-    line-height:1.7em;
+    line-height:1.5em;
     color:#2a2a2a
 }
 h1 {
-    font-size:1.9em;
+    font-size:1.5em;
+    font-weight: bold;
     line-height:1.2em
 }
 @media only screen and (min-width: 992px) {
     body {
-        font-size:1.15em
+        font-size:1em
     }
     h1 {
-        font-size:1.9em;
+        font-size:1.5em;
         line-height:1.1em
     }
 }
 h1, h2, h3, h4, h5, h6 {
     text-rendering:optimizelegibility;
-    margin-bottom:1em;
-    font-weight:normal
+    margin-bottom:0.4em;
+    font-weight:bold
 }
 h2, section h1 {
-    font-size:1.4em
+    font-size:1.1em;
 }
 h3, section h2, section section h1 {
     font-size:1.2em
@@ -125,8 +126,11 @@ h5, section h4, section section h3 {
 h6, section h5, section section h4, section section section h3 {
     font-size:.8em
 }
-p, article blockquote, ul, ol {
+article blockquote, ul, ol {
     margin-bottom:1.5em
+}
+P {
+    margin-bottom:1.2em
 }
 ul {
     list-style-type:disc
@@ -709,7 +713,6 @@ article header p.meta {
 article h2 {
     padding-top:0.8em;
     background:#fff top left repeat-x;
-    text-align:center
 }
 .entry-content article h2:first-child, article header + h2 {
     padding-top:0
@@ -786,7 +789,7 @@ article > footer p.meta {
     background:none
 }
 #content .blog-index article h1 {
-    font-size:1.9em
+    font-size:1.2em
 }
 #content .blog-index article h1 a {
     color:inherit
