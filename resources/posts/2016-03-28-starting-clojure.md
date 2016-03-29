@@ -68,7 +68,7 @@ Namespaces are hierarchical contexts in which symbols live.
 
 For all that Clojure champions statelessness, where namespaces are concerned the evaluation context (of source code being compiled, of evaluations you request in a REPL) is very stateful indeed.
 
-You are always 'in' some namespace, whether you're at some point in time in your use of a REPL or you are the Clojure reader going through the process of compiling a source code file.  You can change the namespace you're in, at any point.  Swapping in and out of namespaces is generally something you'd only to in REPL contexts - in source code files, you generally declare the namespace stuff at the top and that's that.
+You are always 'in' some namespace, whether you're at some point in time in your use of a REPL or you are the Clojure reader going through the process of compiling a source code file.  You can change the namespace you're in, at any point.  Swapping in and out of namespaces is generally something you'd only do in REPL contexts - in source code files, you generally declare the namespace stuff at the top and that's that.
 
 Before you can refer to symbols in a namespace, you have to load (read and evaluate and compile) a source containing those symbols defined in that namespace.  The source generally has to be on the classpath, which is defined by your build tool (more often than not, Leiningen).
 
@@ -76,10 +76,17 @@ You can almost always refer to a symbol by fully qualifying it using its namespa
 
 Multiple source files/locations can contribute symbols to the same namespace, or even to different namespaces - but the convention is generally one file = one namespace = all of the symbols in that namespace.
 
-When you declare the namespace of a source file, you generally use the ns macro, and it's that you should focus on understanding.  At any rate and however you do it, in source files you declare which namespace you're in and also say what other namespaces your source uses and how you'd like to refer to them.  The choices you make here are yours, and are all about brevity/expressivity.   If you use only one function from a foreign namespace, and use it only once, you might as well fully qualify it.  If you use a foreign function a lot, you'll probably want to (use the ns macro or some other mechanism to) alias its namespace or do away with having to mention it at all... unless the function name clashes with another.
+When you declare the namespace of a source file, you generally use the `ns` macro, and it's that you should focus on understanding.  At any rate and however you do it, in source files you declare which namespace you're in and also say what other namespaces your source uses and how you'd like to refer to them.  The choices you make here are yours, and are all about brevity/expressivity.   If you use only one function from a foreign namespace, and use it only once, you might as well fully qualify it.  If you use a foreign function a lot, you'll probably want to (use the ns macro or some other mechanism to) alias its namespace or do away with having to mention it at all... unless the function name clashes with another.
 
-This is initially one of the most confusing things about Clojure, and as usual it's because there are 2 or 3 ways of doing the same thing.  However, it's completely logical once you grok it.   I suggest you let yourself run into a few difficulties to build up a desire to grok it, then go and read http://www.braveclojure.com/organization/ to understand it all much more deeply.  Warning: that goes into the underlying mechanism of namespace management, which you may never need to know about.  If it all gets too confusing, leave it for a while and come back to it after a bit more real-world experience.
+This is initially one of the most confusing things about Clojure.  There are several reasons for this:
 
+* there are several ways of doing the same thing
+* `ns` is a macro which therefore doesn't need its arguments quoted, whereas namespace-related `require`, `use`, `alias` and friends are functions whose arguments are evaluated by the time they get to them
+* `ns` in particular, being a macro, is free to make use of the idomatic Clojure in which keywords (`:require`, `:refer`, `:only`...) are interspersed with symbols, vectors etc in an initially baffling way
+
+However, be reassured that everything is pretty logical, and reassuringly deterministic!   I suggest you let yourself run into a few difficulties to build up a desire to grok the subject, then go and read http://www.braveclojure.com/organization/ to understand it all much more deeply.  Warning: that goes into the underlying mechanism of namespace management, which you may never need to know about.  If it all gets too confusing, leave it for a while and come back to it after a bit more real-world experience.
+
+By the way, since the namespace mechanism is by and large completely accessible to real Clojure, there's a healthy tendency for people to build tools which augment/improve/subvert the whole structure.  In other contexts this might be worrying ("Oh no!  Developers have power!  Things are bound to go wrong!") but Clojurists don't seem to be so afraid of using their brains.
 
 # A good teaching narrative: Clojure for the Brave and True
 
@@ -93,4 +100,4 @@ It's available as a book/an ebook from O'Reilly via http://clojure-cookbook.com/
 
 # The community
 
-Follow [#twitter](https://twitter.com/hashtag/clojure) to a while to get a flavour of what's going on and how people in the community interact.  More at http://clojure.org/community/resources.
+Follow [#clojure](https://twitter.com/hashtag/clojure) to a while to get a flavour of what's going on and how people in the community interact.  More at http://clojure.org/community/resources.
