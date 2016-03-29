@@ -78,15 +78,15 @@ Multiple source files/locations can contribute symbols to the same namespace, or
 
 When you declare the namespace of a source file, you generally use the `ns` macro, and it's that you should focus on understanding.  At any rate and however you do it, in source files you declare which namespace you're in and also say what other namespaces your source uses and how you'd like to refer to them.  The choices you make here are yours, and are all about brevity/expressivity.   If you use only one function from a foreign namespace, and use it only once, you might as well fully qualify it.  If you use a foreign function a lot, you'll probably want to (use the ns macro or some other mechanism to) alias its namespace or do away with having to mention it at all... unless the function name clashes with another.
 
-This is initially one of the most confusing things about Clojure.  There are several reasons for this:
+Namespaces are initially one of the most confusing things about Clojure, for several reasons:
 
 * there are several ways of doing the same thing
 * `ns` is a macro which therefore doesn't need its arguments quoted, whereas namespace-related `require`, `use`, `alias` and friends are functions whose arguments are evaluated by the time they get to them
-* `ns` in particular, being a macro, is free to make use of the idomatic Clojure in which keywords (`:require`, `:refer`, `:only`...) are interspersed with symbols, vectors etc in an initially baffling way
+* `ns` in particular, being a macro, is free to make use of idomatic Clojure in which keywords (`:require`, `:refer`, `:only`...) are interspersed with symbols, vectors etc in an initially baffling way
 
-However, be reassured that everything is pretty logical, and reassuringly deterministic!   I suggest you let yourself run into a few difficulties to build up a desire to grok the subject, then go and read http://www.braveclojure.com/organization/ to understand it all much more deeply.  Warning: that goes into the underlying mechanism of namespace management, which you may never need to know about.  If it all gets too confusing, leave it for a while and come back to it after a bit more real-world experience.
+However, be reassured that everything is pretty logical, and definitely deterministic!   I suggest you let yourself run into a few difficulties to build up a desire to grok the subject, then go and read http://www.braveclojure.com/organization/ to understand it all much more deeply.  Warning: that goes into the underlying mechanism of namespace management, which you may never need to know about.  If it all gets too confusing, leave it for a while and come back to it after a bit more real-world experience.
 
-By the way, since the namespace mechanism is by and large completely accessible to real Clojure, there's a healthy tendency for people to build tools which augment/improve/subvert the whole structure.  In other contexts this might be worrying ("Oh no!  Developers have power!  Things are bound to go wrong!") but Clojurists don't seem to be so afraid of using their brains.
+By the way, since the namespace mechanism is by and large completely accessible to real Clojure, there's a healthy tendency for people to build tools which augment/improve/subvert the whole structure.  In other contexts this might be worrying ("Oh no!  Developers have power!  Things are bound to go wrong!") but Clojurists don't seem to be so afraid of thinking.
 
 # A good teaching narrative: Clojure for the Brave and True
 
