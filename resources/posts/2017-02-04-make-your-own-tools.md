@@ -11,33 +11,33 @@ It's odd, really.  When we're writing code that's more than few lines long, we s
 
 There are many reasons why we tend not to write our own tools, or tend not to give much love to the ones we do create.
 
-- We don't always need much more than what we already have, so we allow ourselves to be drugged by familiarity and forget that it's possible to improve.
+1. We don't always need much more than what we already have, so we allow ourselves to be drugged by familiarity and forget that it's possible to improve.
 
-- When we're not so experienced, we take it as read that everything's been done for us.  "Surely Maven is all you need!"
+1. When we're not so experienced, we take it as read that everything's been done for us.  "Surely Maven is all you need!"
 
-- It's quite easy to write a wiki page.  You get to be a published author!  Your effort is evident to others, and they'll thank you for it.  And when it comes to using it, it's actually quite comforting to follow instructions.  For the first or second time, at least.
+1. It's quite easy to write a wiki page.  You get to be a published author!  Your effort is evident to others, and they'll thank you for it.  And when it comes to using it, it's actually quite comforting to follow instructions.  For the first or second time, at least.
 
-- We might realise we need to make better tools, but developing them is sometimes enough of an overhead to be unmotivating.
+1. We might realise we need to make better tools, but developing them is sometimes enough of an overhead to be unmotivating.
 
-- Sometimes automation and tooling hide things which it's useful to see, especially at the start of a project or a new kind of activity.  That's why manual testing is still valuable.  But it means we get used to not automating stuff.
+1. Sometimes automation and tooling hide things which it's useful to see, especially at the start of a project or a new kind of activity.  That's why manual testing is still valuable.  But it means we get used to not automating stuff.
 
-- When we're working at scales where the effort definitely would be worth our while, there's often too much weight of opinion behind old practices, and we're engaged in so much fire-fighting - ironically often exacerbated by the very lack of tooling - that we can't think clearly in any case.
+1. When we're working at scales where the effort definitely would be worth our while, there's often too much weight of opinion behind old practices, and we're engaged in so much fire-fighting - ironically often exacerbated by the very lack of tooling - that we can't think clearly in any case.
 
-- Our work might be controlled by someone who describes themselves as "delivery-focussed" and hasn't experienced the value of taking stock and investing in work which is at one remove from the increments of business value they want us to get over the line.  To someone in that position, a team writing its own tools is a team wasting time.
+1. Our work might be controlled by someone who describes themselves as "delivery-focussed" and hasn't experienced the value of taking stock and investing in work which is at one remove from the increments of business value they want us to get over the line.  To someone in that position, a team writing its own tools is a team wasting time.
 
-- Writing tools to solve messy software development problems often involves understanding many kinds of technologies, and not everyone has the confidence or the breadth of knowledge required.
+1. Writing tools to solve messy software development problems often involves understanding many kinds of technologies, and not everyone has the confidence or the breadth of knowledge required.
 
-- There might be a Product out there already which Already Does This.  The people setting the agenda will see writing something yourself as unnecessary effort, even if there's every chance the enterprise equivalent is expensive, bloated and doesn't in practice do what you need, or at least not without considerable customisation.
+1. There might be a Product out there already which Already Does This.  The people setting the agenda will see writing something yourself as unnecessary effort, even if there's every chance the enterprise equivalent is expensive, bloated and doesn't in practice do what you need, or at least not without considerable customisation.  And money.  And formal procedures for requesting installation.  And teams of experts.  And time spent finding nothing useful about it on StackOverflow.  And restrictions born of the fact that it's shared by many people.  And downtime.
 
-- Larger companies, especially, tend to mandate the use of specific toolsets, and explicitly making more tools is naughty.  "We already have everything we need!"  Which will either be nothing or one of those bloated enterprise things.
+1. Larger companies, especially, tend to mandate the use of specific toolsets, and explicitly making more tools is naughty.  "We already have everything we need!"  Which will either be nothing or one of those bloated enterprise things.
 
-- Although we might be highly motivated to improve our lot, that motivation might be bound up with to wanting to make a real difference quickly - maybe because we fear it has to be done under the radar - and we may feel we can best do that in a language which fires us up but isn't that of the production system nor of other developers in the team.  Once again, this is deemed naughty.  It is apparently far better to have nothing than to have something that might take a bit of effort to maintain, and apparently it's madness to expect programmers to understand more than one language.  (Don't get me started on the destructive 10,000 hours meme.)  I've seen hugely valuable tools start life out in hack days, where people are given their freedom.
+1. Although we might be highly motivated to improve our lot, that motivation might be bound up with to wanting to make a real difference quickly - maybe because we fear it has to be done under the radar - and we may feel we can best do that in a language which fires us up but isn't that of the production system nor of other developers in the team.  Once again, this is deemed naughty.  It is apparently far better to have nothing than to have something that might take a bit of effort to maintain, and apparently it's madness to expect programmers to understand more than one language.  (Don't get me started on the destructive 10,000 hours meme.)  I've seen hugely valuable tools start life out in hack days, where people are given their freedom.
 
-- Conversely, when it comes to integrating the kinds of tools we deal with as developers, we're often suckered into believing we can't use the first class programming languages we know and love - even if they're the same ones we're using to develop the functionality of our production system.
+1. Conversely, when it comes to integrating the kinds of tools we deal with as developers, we're often suckered into believing we can't use the first class programming languages we know and love - even if they're the same ones we're using to develop the functionality of our production system.
 
-- When we're done writing our tools, there might not be anywhere acceptable to host or distribute whatever we've written, and so it won't get used and can't be promoted.
+1. When we're done writing our tools, there might not be anywhere acceptable to host or distribute whatever we've written, and so it won't get used and can't be promoted.
 
-- Finally, there are those of us who give the whole 'invent what you need' principle a bad name because in the past we've applied it for the wrong reasons, preferring to solve an easier, more interesting and mostly unrelated problem rather than the one our clients care about and are paying us for.
+1. Finally, there are those of us who give the whole 'invent what you need' principle a bad name because in the past we've applied it for the wrong reasons, preferring to solve an easier, more interesting and mostly unrelated problem rather than the one our clients care about and are paying us for.
 
 So here's an example.  It's about a particular idea that's been knocking around in my head for ages, one that would have been of real utility in several widely varying contexts, but that I've not developed anywhere except in my head.  I mention it now for a couple of reasons.  Firstly, it's an example of a failure on my part to apply the principle I'm talking about here, for most of the reasons above.  Secondly, the value of the idea is screaming at me in the current day job, and I don't want to make the same mistake by ignoring that. 
 
@@ -71,7 +71,7 @@ We're not dealing here only with the messiness of acquiring realistic test data 
 
 Once you start thinking like this, the ideas pile on thick and fast.  In a way, that's another reason why I've failed in the past to take the first step, because by the time I steel myself up to it, the first step looks decidedly drab compared to the grandiose vision in my head, and it all seems unachievable.  I find I can't start off with something like [Brett Victor](http://worrydream.com/)'s [round-tripping](https://vimeo.com/36579366) [code editor](https://www.youtube.com/watch?v=PUv66718DII), and I give up then and there.
 
-So let's come back down to reality and wind back to the starting position vis-&agrave;-vis enterprise test data support.  The first few steps to giving ourselves a tool to help ought to be really simple.  If we give ourselves permission we'll see more and more opportunities for improvement using the skills we already have at our fingertips.  And it's that which is really what's most motivating about delivering software - making a useful difference more quickly than last time, getting to powerful and interesting levels of abstraction, and giving yourself more time to think.
+So let's come back down to reality and wind back to the starting position vis-&agrave;-vis enterprise test data support.  The first few steps to giving ourselves a tool to help ought to be really simple.  If we give ourselves permission we'll see more and more opportunities for improvement using the skills we already have at our fingertips.  And it's that which is really what's most motivating about delivering software: making a useful difference more quickly than last time, getting to powerful and interesting levels of abstraction, and giving yourself more time to think.
 
 I'm going to step back into the day job to try out this particular idea.  I'm also going to reflect on how we can do better in future.  A more disciplined approach to reflection - retrospectives, if you like - would help.  Finally, I'm going to bear in mind in this and future engagements the stumbling blocks which stand in the way of making improvements like this.
   
