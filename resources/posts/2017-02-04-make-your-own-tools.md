@@ -3,13 +3,17 @@ title : Make your own tools
 tags : clojure
 ---
 
-As developers, I wish we dared more to step away from the blunt, primitive tools at the bottom of the software development stack - IDEs, logs, CI servers, the command line - to write the kinds of higher-order tools that would help us work more effectively and give us more enjoyment in our jobs.  We should enjoy using our skills to make our lives easier and deliver better software.  Too often we fail to do this, and we're missing out on real opportunities to improve.
+As developers, I wish we dared more to step away from the blunt, primitive tools at the bottom of the software development stack - IDEs, logs, CI servers, the command line - to write higher-order tools that can help us work more effectively and give us more enjoyment in our jobs.  We should relish using our skills to make our lives easier and deliver better software.  Too often we fail to do this, and we're missing out on real opportunities to improve.
 
-It's odd, really.  When we're writing code that's more than few lines long, we soon think of breaking it up into chunks and using those chunks at a higher level, then as things grow still more we refactor _that_ and compose over it, and so on up the ladder of abstraction.  We don't end up writing files of source code thousands of lines long, or at least I hope not.  But when it comes to the activities we code ourselves to do, whether at the computer or in our interactions with each other and with people outside the team, we're perfectly happy death-marching through numerous repetitive, un-factored-out, long-winded, ambiguously-defined, error-prone steps time and time again.  Click, click, copy, browse, copy, type, email, chat, type, type, Slack, chat, click, type... "Oh, wait!  Why don't I write this up on a wiki page?"
+By "tools", I mean useful stuff accessed from the command line or REPL, or from within a dedicated app, or exposed through a REST interface, or accessed through a GUI - whatever control and view surfaces make sense for the way in which the facility needs to be used.
 
-You can understand why we might not write our own tools, or might not give much love to the ones we do create.
+It's odd, really.  When we're writing code that's more than few lines long, we soon think of breaking it up into chunks and using those chunks at a higher level, then as things grow still more we refactor _that_ and compose over it, and so on up the ladder of abstraction.  We don't end up writing files of source code thousands of lines long, or at least I hope not.  But when it comes to the activities we code ourselves to do, whether at the computer or in our interactions with each other and with people outside the team, we're perfectly happy bolting together the same old steps.  We seem unaware that we're death-marching through numerous repetitive, un-factored-out, long-winded, ambiguously-defined, error-prone steps time and time again.  Click, click, copy, browse, copy, type, email, chat, type, type, Slack, chat, click, type... "Oh, wait!  Why don't I write this up on a wiki page?"
+
+There are many reasons why we tend not to write our own tools, or tend not to give much love to the ones we do create.
 
 - We don't always need much more than what we already have, so we allow ourselves to be drugged by familiarity and forget that it's possible to improve.
+
+- When we're not so experienced, we take it as read that everything's been done for us.  "Surely Maven is all you need!"
 
 - It's quite easy to write a wiki page.  You get to be a published author!  Your effort is evident to others, and they'll thank you for it.  And when it comes to using it, it's actually quite comforting to follow instructions.  For the first or second time, at least.
 
@@ -17,9 +21,9 @@ You can understand why we might not write our own tools, or might not give much 
 
 - Sometimes automation and tooling hide things which it's useful to see, especially at the start of a project or a new kind of activity.  That's why manual testing is still valuable.  But it means we get used to not automating stuff.
 
-- When we're working at scales where the effort definitely would be worth our while, there's often too much weight of opinion behind old practices, and we're engaged in so much fire-fighting - ironically often _exacerbated_ by the very lack of tooling - that we can't think clearly in any case.
+- When we're working at scales where the effort definitely would be worth our while, there's often too much weight of opinion behind old practices, and we're engaged in so much fire-fighting - ironically often exacerbated by the very lack of tooling - that we can't think clearly in any case.
 
-- Our work might be controlled by someone who takes pride in describing themselves as "delivery-focussed" without stopping to think what that might mean.  They see a team writing its own tools as wasting time.  They may be too fixated on the short term.
+- Our work might be controlled by someone who describes themselves as "delivery-focussed" and hasn't experienced the value of taking stock and investing in work which is at one remove from the increments of business value they want us to get over the line.  To someone in that position, a team writing its own tools is a team wasting time.
 
 - Writing tools to solve messy software development problems often involves understanding many kinds of technologies, and not everyone has the confidence or the breadth of knowledge required.
 
@@ -37,7 +41,7 @@ You can understand why we might not write our own tools, or might not give much 
 
 So here's an example.  It's about a particular idea that's been knocking around in my head for ages, one that would have been of real utility in several widely varying contexts, but that I've not developed anywhere except in my head.  I mention it now for a couple of reasons.  Firstly, it's an example of a failure on my part to apply the principle I'm talking about here, for most of the reasons above.  Secondly, the value of the idea is screaming at me in the current day job, and I don't want to make the same mistake by ignoring that. 
 
-The idea is about a little toolset for using test data in complex enterprise systems.  It's an idea that starts life really simple.  It's easy to begin.  But it fertilises [the garden of your mind]( https://www.youtube.com/watch?v=OFzXaFbxDcM) for other ideas to grow - again, we're climbing up the ladder of abstraction.  As well as wildly mixing metaphors.
+The idea is about a little toolset for using test data in complex enterprise systems.  It's an idea that starts life really simple.  It's easy to begin.  But it fertilises [the garden of your mind](https://www.youtube.com/watch?v=OFzXaFbxDcM) for other ideas to grow - again, we're climbing up the ladder of abstraction.  As well as wildly mixing metaphors.
 
 Nowhere do we need better tools for testing software than in large-scale enterprises.  Like it or not, delivering software in big organisations usually means dealing with real legacy systems in unreliable environments which contain (or serve up) test data of deeply uncertain provenance and all-too-evident unreliability.  Test data is often won at significant cost, perhaps involving whole teams of people to mine for it or create if from scratch.  It's jealously hoarded once acquired, but rarely safe from interference.  It's often intermittently available as the environments which deliver it come and go.
 
@@ -69,4 +73,6 @@ Once you start thinking like this, the ideas pile on thick and fast.  In a way, 
 
 So let's come back down to reality and wind back to the starting position vis-&agrave;-vis enterprise test data support.  The first few steps to giving ourselves a tool to help ought to be really simple.  If we give ourselves permission we'll see more and more opportunities for improvement using the skills we already have at our fingertips.  And it's that which is really what's most motivating about delivering software - making a useful difference more quickly than last time, getting to powerful and interesting levels of abstraction, and giving yourself more time to think.
 
-I'm going to step back into the day job to try this out, with a renewed determination to look for opportunities to create the tools we genuinely need.  I'd promise to report back here on how it goes, but given my blogging frequency I might have died before I get round to it.
+I'm going to step back into the day job to try out this particular idea.  I'm also going to reflect on how we can do better in future.  A more disciplined approach to reflection - retrospectives, if you like - would help.  Finally, I'm going to bear in mind in this and future engagements the stumbling blocks which stand in the way of making improvements like this.
+  
+I'd promise to report back here on how it goes, but given my blogging frequency I might have died before I get round to it.
