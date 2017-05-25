@@ -10,10 +10,10 @@ With thanks to those involved, code (but not content within `resources/posts`) i
 Running
 -------
 
-Local Server
+Serve the site locally:
 
     $ lein ring server
 
-Build Site (exports to dist/)
+Build the site, exporting to /dist:
 
     $ lein build-site
