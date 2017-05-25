@@ -1,5 +1,5 @@
-jonoflayham.github.io
-=====================
+Blog generator for jonoflayham.github.io
+========================================
 
 [![Build Status](https://travis-ci.org/jonoflayham/blog-gen.svg?branch=master)](https://travis-ci.org/jonoflayham/blog-gen)
 
