@@ -37,4 +37,4 @@ git add --all
 git config user.email "jonoflayham@gmail.com"
 git config user.name "Jon Woods"
 git commit -m "Site generated from https://github.com/jonoflayham/blog-gen/commit/$generatorCommitHash"
-git push git@github.com:jonoflayham/blog-gen.git master
+git push git@github.com:jonoflayham/jonoflayham.github.io.git master
