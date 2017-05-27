@@ -28,7 +28,7 @@ rm -rf dist
 BLOG_REPO_URL=git@github.com:jonoflayham/jonoflayham.github.io.git
 git clone $BLOG_REPO_URL dist
 
-echo "Build site and so mutating existing site content"
+echo "Build site and so mutate existing site content"
 lein run -m blog-gen.web/export dist
 
 echo "Add, commit and push changes to the repo for the built site"
