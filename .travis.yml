@@ -7,4 +7,5 @@ jdk:
   - oraclejdk8
 script: bash travis-test-and-push.sh
 env:
-  - secure: "Aeh/gJcV/+FyUzcEtvyjtmtGG4Pqh/qYCnANB2KXosFjlevYGiGrk4tqScKF/96X2hKNQ6iobi7UO8INaak72i18GDM7p9Nt9WiN41GNncrsOnI2Pa9QdKq+pf+fUVCskklyVqFPiyvEMD/QPmU6oowOo9BFEDOYr5r66tMSRiI="
+  global:
+  - ENCRYPTION_LABEL: 29dacee7dcf2

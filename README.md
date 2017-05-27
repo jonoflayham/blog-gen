@@ -17,3 +17,8 @@ Serve the site locally:
 Build the site, exporting to /dist:
 
     $ lein build-site
+
+Travis config
+-------------
+
+Cf https://gist.github.com/domenic/ec8b0fc8ab45f39403dd for guidance.
