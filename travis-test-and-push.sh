@@ -5,7 +5,7 @@ lein midje
 
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     echo "Travis pull request, so only building site, not pushing it"
-    lein run -m blog-gen.web/export
+    lein run -m blog-gen.web/export dist
     exit 0
 fi
 
