@@ -9,3 +9,4 @@ pom.xml.asc
 !.nojekyll
 !.travis.yml
 ~$*
+resources/public/stmarys/backups
