@@ -4,18 +4,18 @@
   :license {:name "BSD 2 Clause"
             :url  "http://opensource.org/licenses/BSD-2-Clause"}
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [stasis "2.3.0"]
-                 [ring "1.6.3"]
+                 [stasis "2.5.0"]
+                 [ring "1.7.1"]
                  [hiccup "1.0.5"]
                  [me.raynes/cegdown "0.1.1"]
                  [enlive "1.1.6"]
-                 [clygments "1.0.0"]
-                 [optimus "0.20.1"]
-                 [clj-time "0.14.2"]
+                 [clygments "2.0.0"]
+                 [optimus "0.20.2"]
+                 [clj-time "0.15.2"]
                  [org.clojure/data.xml "0.0.8"]]
   :ring {:handler blog-gen.web/app}
   :aliases {"build-site" ["run" "-m" "blog-gen.web/export"]}
-  :profiles {:dev {:dependencies [[midje "1.9.1" :exclusions [org.clojure/clojure]]]
+  :profiles {:dev {:dependencies [[midje "1.9.9" :exclusions [org.clojure/clojure]]]
                    :plugins      [[lein-ring "0.12.2"]
                                   [lein-midje "3.2"]
                                   [lein-ancient "0.6.15"]]}})
