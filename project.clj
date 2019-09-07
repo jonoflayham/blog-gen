@@ -3,7 +3,7 @@
   :url "http://jonoflayham.com"
   :license {:name "BSD 2 Clause"
             :url  "http://opensource.org/licenses/BSD-2-Clause"}
-  :dependencies [[org.clojure/clojure "1.9.0"]
+  :dependencies [[org.clojure/clojure "1.10.1"]
                  [stasis "2.5.0"]
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]
