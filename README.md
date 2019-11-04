@@ -17,16 +17,3 @@ Serve the site locally:
 Build the site, exporting to /dist:
 
     $ lein build-site
-
-Travis config
--------------
-
-Cf https://gist.github.com/domenic/ec8b0fc8ab45f39403dd for guidance.
-
-In summary:
-
-- generate a key pair and give GitHub the public key as a deploy key for the blog site
-
-- ask Travis to encrypt the private key, storing the result and the initialisation vector (IV) used, with `travis encrypt-file deploy_key`
-
-- decrypt the deploy key during the Travis build, using Travis's environment retrieval mechanism to find the encrypted version and the IV used, and use the decrypted private deploy key to push blog site changes to GitHub
