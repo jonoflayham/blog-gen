@@ -5,7 +5,7 @@
 # Assumes that the generating site content is fully committed, ie 'git status'
 # would show nothing.
 
-generatorCommitHash=`git rev-parse HEAD`
+generatorCommitHash=$(git rev-parse HEAD)
 
 echo "Clone existing repo for the built site"
 
