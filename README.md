@@ -17,3 +17,7 @@ Serve the site locally:
 Build the site, exporting to /dist:
 
     $ lein build-site
+
+Build and publish site, having committed and pushed changes:
+
+    # ./build-and-push-site.sh
